@@ -2,19 +2,6 @@ const process = require('process');
 const fs = require('fs');
 const axios = require('axios');
 
-// function outputHandler(text, out) {
-//   if(out) {
-//     fs.writeFile(out, text, 'utf8', function(err) {
-//       if(err) {
-//         console.error(`Couldn't write ${out}: ${err}`);
-//         process.exit(1);
-//       }
-//     });
-//   } else {
-//       console.log(text);
-//   }
-// }
-
 function cat(path, out) {
   fs.readFile(path, 'utf8', function(err, data) {
     if(err) {
